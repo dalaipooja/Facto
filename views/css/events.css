@@ -1,0 +1,11 @@
+@import url("../assets/css/style.css");
+
+.events .card-img img {
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.events .card-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+}

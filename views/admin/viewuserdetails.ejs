@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/viewuserdetailscss.css">
+</head>
+<body>
+
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>USER DETAILS</h2>
+        <p>"Choose a job you love, and you will never have to work a day in your life" —Confucius</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+<div class="container" id="abc">
+   <!-- <a href="/page4" class="btn btn-sm btn-primary">Add User</a><br/><br/>  -->
+  <table class="table table-dark table-striped" >
+    <thead>
+      <tr>
+        <th>Fullname</th>
+        <th>Email</th>
+        <th>Local_Address</th>
+        <th>Passport Photo</th>
+        <th>Gender</th>
+         <th>Phone_number</th>
+        <th>  Date_of_Birth  </th>
+
+        <th>Recent_Degree</th>
+        <th>University/College</th>
+        <th>Graduating_Year</th>
+        <th>Grade</th>
+        
+        <th>Result_Report</th>
+
+         <th style="width: 50px">Area_of_Specialization</th>
+        <th>Experience</th>
+        <th>Linkedin_Account</th>
+        <th>Resume</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% 
+        if(User.length > 0){
+           for(let i=0;i<User.length;i++){
+             %>
+              <tr>
+              <td><%= User[i].name %></td>
+              <td><%= User[i].email %></td>
+              <td><%= User[i].address %></td>
+              <td><%= User[i].image %></td>
+              <td><%= User[i].phoneno %></td>
+              <td><%= User[i].dob %></td>
+              <td><%= User[i].gender %></td>
+              
+              
+              
+              <td><%= User[i].degree %></td>
+              <td><%= User[i].college %></td>
+              <td><%= User[i].year %></td>
+              <td><%= User[i].grade %></td>
+              <td><%= User[i].report %></td>
+
+              <td><%= User[i].specialization %></td>
+              <td><%= User[i].experience %></td>
+              <td><%= User[i].linkedinaccount %></td>
+              <td><%= User[i].resume %></td>
+              
+              </tr> 
+              <%
+           }
+        }
+        else{
+           %>
+           <tr>
+               <td colspan="5">Users Not Found</td>
+           </tr>
+           <%
+        }
+        %>
+   </tbody>
+    
+         
+    </tbody>
+  </table>
+  <div class="loginkro">
+    <a href="/dashboard"  style="color:black">BACK TO DASHBOARD</a> <br>
+</div> 
+</div>
+
+</body>
+</html>

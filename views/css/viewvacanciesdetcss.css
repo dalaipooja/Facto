@@ -1,0 +1,222 @@
+/* body{
+    background-image: url("../images/a2.jpg");
+    background-size: cover;
+    background-position: center; */
+    /* background-position: center; */
+    
+/* } */
+/* .container {
+    padding-right: 35px;
+    padding-left: 15px;
+    margin-right: 0px;
+    margin-left: -4px;
+   
+} */
+/* .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 2.5rem;
+    font-size: 40px;
+     font-weight: 500;
+    line-height: 2.2;
+    text-align: center;
+    font-family: ui-rounded;
+    font-weight: bold;
+    margin-top: 23px;
+    margin-left: 15px;
+    
+ }  */
+/* p{
+    margin-bottom: 2.5rem;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+    color: blue;
+    font-size: 18px;
+    letter-spacing:5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ p,h{
+    position: static;
+}   */
+/* .container,a{
+    padding-left: 15px;
+}
+.container  {
+    padding-right: 20px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('../assets/css/style.css');
+
+/* @media (max-width: 992px) */
+.breadcrumbs {
+    margin-top: 2px;
+    margin-bottom: 40px;
+    height: auto;
+}
+
+body{
+    /* background-image: url("../images/a7.jpg"); */
+    background-color: white;
+    background-size: cover;
+    /* background-position: center; */
+    
+}
+/* .container {
+    padding-right: 35px;
+    padding-left: 15px;
+    margin-right: 0px;
+    margin-left: -4px;
+   
+} */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0px;
+    font-size: 40px;
+     font-weight: 500;
+    line-height: 2.2;
+    text-align: center;
+    font-family: ui-rounded;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-left: 15px;
+    
+ } 
+/* p{
+    margin-bottom: 2.5rem;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+    color: blue;
+    font-size: 18px;
+    letter-spacing:5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ p,h{
+    position: static;
+}   */
+
+a:link, a:visited {
+    /* background-color: #f44336; */
+    background-color: rgb(63, 63, 204);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .loginkro {
+    text-align: center;
+  }
+  .loginkro {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .loginkro p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .loginkro a {
+    
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(112, 45, 143);;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .loginkro a:hover {
+    
+    background-color: rgb(145, 78, 175);;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
+ .back a:link, a:visited {
+    /* background-color: #f44336; */
+    background-color: rgb(204, 63, 122);
+    color: white;
+    padding: 14px 25px;
+  margin-left: 130px;
+    /* padding-left: 59px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+.back  a:hover, a:active {
+    background-color: red;
+  }
+
+  .loginkro {
+    text-align: center;
+  }
+  .loginkro {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .loginkro p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .loginkro a {
+    
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(112, 45, 143);;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .loginkro a:hover {
+    
+    background-color: rgb(145, 78, 175);;
+  }
+  
+  .editbtnka{
+    
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: 1px solid #4CAF50;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  
+  a.button:hover {
+      background-color: #45a049;
+      border: 1px solid #45a049;
+  }
+  }
+  #vac{
+    color: black;
+    text-shadow: 2px 2px rgb(175, 122, 175);
+  }

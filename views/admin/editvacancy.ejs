@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Facto</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/viewvacanciesdetcss.css">
+</head>
+<body>
+
+
+
+  <div class="breadcrumbs" data-aos="fade-in">
+    <div class="container">
+      <h2>VACANCY DETAILS</h2>
+      <p>"Choose a job you love, and you will never have to work a day in your life" —Confucius</p>
+    </div>
+  </div><!-- End Breadcrumbs -->
+  <!-- <h2 id="vac">VACANCY DETAILS</h2> -->
+  <!-- <p>Choose a job you love, and you will never have to work a day in your life. —Confucius</p> -->
+   <!-- <a href="/page4" class="btn btn-sm btn-primary">Add User</a><br/><br/>  -->
+   <div class="container" id="abc">
+  <table class="table table-dark table-striped" >
+    <thead>
+      <tr>
+        <th>Vacancy_Name</th>
+        <th>Qualification</th>
+        <th>Stream</th>
+        <th>Experience</th>
+        <th>Actions</th>
+          </tr>
+    </thead>
+
+    <tbody>
+         <% 
+
+         if(vacancy.length > 0){
+            for(let i=0;i<vacancy.length;i++){
+              %>
+               <tr>
+               <td><%= vacancy[i].vacancyname %></td>
+               <td><%= vacancy[i].qualification %></td>
+               <td><%= vacancy[i].stream %></td>
+               <td><%= vacancy[i].experience %></td>
+               <td>
+                <a href="/adminedit-vac?id=<%= vacancy[i]._id %>">Edit</a>
+                <a href="/admindelete-vac?id=<%= vacancy[i]._id %>">Delete</a>
+              </td>
+               </tr> 
+               <%
+            }
+         }
+         else{
+            %>
+            <tr>
+                <td colspan="5">Users Not Found</td>
+            </tr>
+            <%
+         }
+         %>
+        
+    </tbody>
+  </table>
+  <div class="loginkro">
+    <a href="/dashboard"  style="color:black">BACK TO DASHBOARD</a> <br>
+</div> 
+ 
+</body>
+</html>

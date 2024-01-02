@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Facto</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('../images/imggg.webp');
+      /* background: -webkit-linear-gradient(left, #202124, #222024); */
+      background-image:  linear-gradient(30deg, rgba(74, 70, 75, 0.75), rgba(83, 58, 88, 0.75)), url('../images/imggg.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    input, select, textarea, button {
+      margin-bottom: 10px;
+      width: calc(100% - 20px);
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    button {
+      background-color: #ae00ff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #6200b3;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="container">
+  <form action="/applyvacancy" method="post">
+  <div id="page1" class="page active">
+    <!-- Page 1: Personal Details -->
+    <h2>Personal Details</h2>
+    <input type="text" id="name" name="name" placeholder="Name" required>
+    <!-- <input type="text" id="lastName" placeholder="Last Name" required> -->
+    <input type="email" id="email" name="email" placeholder="Email" required>
+    <input type="tel" id="contactNo" name="number" placeholder="Enter 10-digit phone no." required>
+    
+    <!-- <select id="gender" required>
+      <option value="" disabled selected>Select Gender</option>
+      <option value="male" >Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select> -->
+
+    <textarea id="address" name="address" placeholder="Address" required></textarea>
+    <input type="date" name="dob" id="dob" required>
+
+    <div class="gender-details" id="gender" required>
+      <input type="radio" name="gender" id="dot-1" />
+      <input type="radio" name="gender" id="dot-2" />
+      <input type="radio" name="gender" id="dot-3" />
+      <span class="gender-title">Gender</span>
+      <div class="category">
+        <label for="dot-1">
+          <span class="dot one"></span>
+          <span class="gender">Male</span>
+        </label>
+        <label for="dot-2">
+          <span class="dot two"></span>
+          <span class="gender">Female</span>
+        </label>
+        <label for="dot-3">
+          <span class="dot three"></span>
+          <span class="gender">Other</span>
+        </label>
+      </div> 
+</div>
+    
+    <button onclick="nextPage(1)">Next</button>
+  </div>
+
+  <div id="page2" class="page">
+    <!-- Page 2: Qualification Details -->
+    <h2>Qualification Details</h2>
+    <input type="text" name="degree" id="highestDegree" placeholder="Highest Degree" required>
+    <input type="text" name="college" id="university" placeholder="University Name" required>
+    <input type="text" name="grade" id="grade" placeholder="Grade" required>
+    <input type="number" name="year" id="year" placeholder="Year" required>
+    <input type="file" name="report" id="resultPDF" accept=".pdf" required>
+    <button onclick="nextPage(2)">Next</button>
+  </div>
+
+  <div id="page3" class="page">
+    <!-- Page 3: Professional Details -->
+    <h2>Professional Details</h2>
+    <input type="text" name="area" id="specialization" placeholder="Area of Specialization" required>
+    <input type="number" name="experience" id="experience" placeholder="Experience (in years)" required>
+    <input type="file" name="resume" id="resumePDF" accept=".pdf" required>
+    <input type="text" name="ln" id="linkedin" placeholder="LinkedIn Profile">
+    <button onclick="submitForm()">Submit</button>
+  </div>
+</div>
+ </form>
+   <% 
+if(typeof message !== 'undefined'){
+%>
+<h4 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><%= message %></h4>
+<%
+}
+%>
+<script>
+    // JavaScript code
+    let currentPage = 1;
+    const pages = document.querySelectorAll('.page');
+  
+    function showPage(pageNumber) {
+      pages.forEach(page => {
+        page.classList.remove('active');
+      });
+      pages[pageNumber - 1].classList.add('active');
+    }
+  
+    function nextPage(currentPage) {
+      if (currentPage < pages.length) {
+        if (currentPage === 1) {
+          const contactNo = document.getElementById('contactNo').value.trim();
+          if (!isValidIndianPhoneNumber(contactNo)) {
+            alert('Please enter a valid 10-digit Indian phone number.');
+            return;
+          }
+          const email = document.getElementById('email').value.trim();
+          if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+        }
+        showPage(currentPage + 1);
+      }
+    }
+  
+    function isValidIndianPhoneNumber(phone) {
+      // Check for 10 digits starting with 6, 7, 8, or 9 (Indian phone number format)
+      return /^[6-9]\d{9}$/.test(phone);
+    }
+  
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+  
+    function submitForm() {
+      // Form submission logic here
+      let formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        contactNo: document.getElementById('contactNo').value,
+        gender: document.getElementById('gender').value,
+        address: document.getElementById('address').value,
+        dob: document.getElementById('dob').value,
+        highestDegree: document.getElementById('highestDegree').value,
+        university: document.getElementById('university').value,
+        grade: document.getElementById('grade').value,
+        year: document.getElementById('year').value,
+        resultPDF: document.getElementById('resultPDF').value,
+        specialization: document.getElementById('specialization').value,
+        experience: document.getElementById('experience').value,
+        resumePDF: document.getElementById('resumePDF').value,
+        linkedin: document.getElementById('linkedin').value
+      };
+      console.log(formData); // This will log the form data, you can handle submission to server here
+    }
+  </script>
+  
+  </body>
+  </html>

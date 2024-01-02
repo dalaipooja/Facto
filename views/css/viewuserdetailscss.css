@@ -1,0 +1,171 @@
+/* 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #588c7e;
+    font-family: monospace;
+    font-size: 25px;
+    text-align: left;
+    }
+    th {
+    background-color: #588c7e;
+    color: white;
+    }
+    */
+/* .container {
+
+    padding-right: 35px;
+    padding-left: 15px;
+    margin-right: 26px;
+    margin-left: 4px;
+}  */
+
+/* @import url("../assets/css/style.css"); */
+body{
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    padding-right: 35px;
+    padding-left: 15px;
+    margin-right: 0px;
+    margin-left: -4px;
+   
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    /* margin-bottom: 2.5rem; */
+    font-weight: 500;
+    line-height: 2.2;
+    text-align: center;
+    font-family: ui-rounded;
+    font-weight: bold;
+    margin-top: 23px;
+    margin-left: 40px;
+    
+}
+p{
+    margin-bottom: 2.5rem;
+    font-weight: bolder;
+    font-style: italic;
+    text-align: center;
+    color: blue;
+    font-size: 18px;
+    /* letter-spacing:5px; */
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+p,h{
+    position: static;
+}
+
+.loginkro {
+    text-align: center;
+  }
+  .loginkro {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .loginkro p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .loginkro a {
+    
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(112, 45, 143);;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .loginkro a:hover {
+    
+    background-color: rgb(145, 78, 175);;
+  }
+  
+/* .table table-dark table-striped {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table table-dark table-striped th,.table table-dark table-stripedtd {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .table table-dark table-striped tr:nth-child(even){background-color: #f2f2f2;}
+  
+ .table table-dark table-striped tr:hover {background-color: #ddd;}
+  
+  .table table-dark table-striped th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  } */
+
+@import url("../assets/css/style.css");
+
+  .loginkro {
+  text-align: center;
+}
+.loginkro {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.loginkro p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.breadcrumbs {
+    margin-top: 2px;
+    margin-bottom: 40px;
+    height: auto;
+}
+.loginkro a {
+  
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(112, 45, 143);;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.loginkro a:hover {
+  
+  background-color: rgb(145, 78, 175);;
+}
+
+.editbtnka{
+  
+  a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a.button:hover {
+    background-color: #45a049;
+    border: 1px solid #45a049;
+}
+}

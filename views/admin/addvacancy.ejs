@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Facto</title>
+    <link rel="stylesheet" href="../css/addvacancycss.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addvacancy" method="post" >
+   <h3>ADD VACANCY DETAILS</h3>
+   
+    <hr>
+    
+    <label for="name"><b>Job Title</b></label>
+    <input type="text" placeholder="Enter Name" name="job" value="" id="name" required>
+
+    <label for="num"><b>Experience</b></label>
+    <input type="number" placeholder="No. of Years" name="experience" value="" id="num" required>
+
+    <label for="degree"><b>Stream</b></label>
+    <input type="text" placeholder="Qualification" name="stream" value="" id="degree" required>
+
+    <label for="degree"><b>Qualification</b></label>
+    <input type="text" placeholder="Qualification" name="qualification" value="" id="degree" required>
+
+    <button type="submit" class="registerbtn">ADD VACANCY</button>
+
+     <br>
+    
+     
+    <% 
+if(typeof message !== 'undefined'){
+     %>
+     <h4 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"><%= message %></h4>
+     <%
+}
+%>
+     
+</form>
+<div class="loginkro">
+<a href="/dashboard" style="color:black">BACK TO DASHBOARD</a> <br>
+</div>
+</div>
+</body>
+</html>
