@@ -138,13 +138,13 @@ const sendRegistrationMail = async(name,email,user_id)=>{
             secure:false,
             requireTLS:true,
             auth:{
-                user:'poojadalai20704@acropolis.in',
-                pass:'acro1234'
+                user:'abc@gmail.com',
+                pass:'1234'
             }
         });
 
         const mailOptions = {
-            from:'poojadalai20704@acropolis.in',
+            from:'abc@gmail.com',
             to:email,
             subject:'Welcome to Facto!',
             html:'<p>Welcome to Facto,'+name+ '!</p> <br>Dear Participants,<br> Greetings from CSIT ACROPOLIS ! <br><br> We are delighted to confirm your registration has been successfully accomplished<hr> Dont forget to Check your mail for further process</p>'
