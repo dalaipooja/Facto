@@ -27,15 +27,6 @@ const customcrone = require('./crone');
 
 customcrone.sendMailAllUser();
 
-// app.get("/sendEmail", (req, res) => {
-//     sendEmail(
-//       "test@mailinator.com",
-//       "Welcome message",
-//       "Welcome message content"
-//     );
-//     res.send("send email success");
-//   });
-
 const userRoute = require('./routes/userRoute');
 app.use('/',userRoute);
 

@@ -13,18 +13,6 @@ body{
   align-items: center;
   padding: 10px;
   opacity: 2.5;
-  /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
-  /* background-image: url("../images/Untitled\ design.png"); */
-  /* background-image: linear-gradient(
-      rgba(243, 231, 240, 0.922),
-      rgba(217, 177, 223, 0.922)
-    ),
-    url("../images/Untitled\ design.png"); */
-    /* background-image: linear-gradient(
-      rgba(206, 172, 172, 0.922),
-      rgba(44, 44, 44, 0.922)
-    ),
-    url("../images/Untitled\ design.png"); */
 
     background-image: url("../images/a7.jpg");
     background-repeat: no-repeat;

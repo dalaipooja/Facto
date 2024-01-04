@@ -1,10 +1,5 @@
 const express = require("express");
 const user_route =express();
-// const session = require("express-session");
-
-// const config = require('../config/config.js');
-// user_route.use(session({secret:config.sessionSecret}));
-
 
 user_route.set('view engine','ejs');
 user_route.set('views','./views/users');

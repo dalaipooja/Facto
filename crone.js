@@ -13,8 +13,8 @@ const sendMailToAllUsers = async(emailObj)=>{
             secure:false,
             requireTLS:true,
             auth:{
-                user:'poojadalai20704@acropolis.in',
-                pass:'acro1234'
+                user:'',
+                pass:''
             }
     })
     // var url = <a href="tests.mettl.com/authenticateKey/5ls8j2g2rk"></a>
@@ -56,30 +56,6 @@ const sendMailAllUser = ()=>{
     }
 }
 
-
-
-// const InsertEmail = async(req,res)=>{
-//     try {  
-       
-//         const sendemail = new sentEmail({
-//         subject: req.body.subject,
-//         message: req.body.message,
-//         })   
-       
-        // const userData = await sendemail.save();
-        // if(userData){
-        //     // res.render("sendemail",{message:"Click on the sent email button to sent email"});
-
-        // }
-        // else{
-        //     console.log(error.message);   
-        // }
-
-//     } catch (error) {
-//             console.log(error);    
-//     }
-
-// }
 
 const loadEmailpage = async(req,res)=>{
 
